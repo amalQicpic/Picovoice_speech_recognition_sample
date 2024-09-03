@@ -1,0 +1,28 @@
+name: picovoice_speech_recognition
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.1
+
+dependencies:
+  cupertino_icons: ^1.0.8
+  flutter:
+    sdk: flutter
+  picovoice_flutter: ^3.0.3
+  # speech_to_text: ^7.0.0
+  # flutter_tts: ^4.0.2
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/Hey-Flutter_en_android_v3_0_0.ppn
+    - assets/Testing_en_android_v3_0_0.rhn
+    - assets/Hey-Quick-Pic_en_android_v3_0_0.ppn
+    - assets/Qicpic_en_android_v3_0_0.rhn
