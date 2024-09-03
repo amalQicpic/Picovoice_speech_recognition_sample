@@ -16,7 +16,7 @@ class _VoiceAssistantHomeState extends State<VoiceAssistantHome> {
   late PicovoiceManager _picovoiceManager;
   
   String _statusMessage =
-      "Say the wake word to start! wake keyword is 'Qicpic'";
+      "Say the wake word to start! wake keyword is 'Hey Qicpic'";
 
   @override
   void initState() {
