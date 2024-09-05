@@ -21,6 +21,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/Hey-Quick-Pic_en_android_v3_0_0.ppn
-    - assets/Qicpic_en_android_v3_0_0.rhn
+    - assets/Hey-Quick-pick_en_android_v3_0_0.ppn
+    - assets/QIcpic_en_android_v3_0_0.rhn
     - assets/QICPIC logo_Vertical-01.jpg

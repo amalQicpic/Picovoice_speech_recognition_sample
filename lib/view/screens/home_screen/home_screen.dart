@@ -1,3 +1,4 @@
+
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:picovoice_flutter/picovoice_manager.dart';
@@ -60,9 +61,9 @@ class _VoiceAssistantHomeState extends State<VoiceAssistantHome> {
     try {
       _picovoiceManager = await PicovoiceManager.create(
         accessKey,
-        "assets/Hey-Quick-Pic_en_android_v3_0_0.ppn", // Path to your wake word file
+        "assets/Hey-Quick-pick_en_android_v3_0_0.ppn", // Path to your wake word file
         _wakeWordCallback,
-        "assets/Qicpic_en_android_v3_0_0.rhn", // Path to your context file
+        "assets/QIcpic_en_android_v3_0_0.rhn", // Path to your context file
         _inferenceCallback,
       );
       await _picovoiceManager.start();
@@ -85,8 +86,14 @@ class _VoiceAssistantHomeState extends State<VoiceAssistantHome> {
   void _inferenceCallback(RhinoInference inference) {
     setState(() {
       if (inference.isUnderstood!) {
-        _statusMessage =
-            "Intent: ${inference.intent}\nSlots: ${inference.slots}";
+        // Check if the intent is "address"
+        if (inference.intent == "Address") {
+          _statusMessage =
+              "QICPIC INNOVATIONS Pvt Ltd, G1, Dev plaza, Kadri Temple Rd, Mallikatte, Kadri, Mangaluru, Karnataka 575002";
+        } else {
+          _statusMessage =
+              "Intent: ${inference.intent}\nSlots: ${inference.slots}";
+        }
       } else {
         _statusMessage = "Didn't understand the command.";
         _showImage = false;
