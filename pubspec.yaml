@@ -11,8 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   picovoice_flutter: ^3.0.3
-  # speech_to_text: ^7.0.0
-  # flutter_tts: ^4.0.2
+  rhino_flutter: ^3.0.3
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -22,7 +21,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/Hey-Flutter_en_android_v3_0_0.ppn
-    - assets/Testing_en_android_v3_0_0.rhn
     - assets/Hey-Quick-Pic_en_android_v3_0_0.ppn
     - assets/Qicpic_en_android_v3_0_0.rhn
+    - assets/QICPIC logo_Vertical-01.jpg

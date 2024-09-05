@@ -14,9 +14,9 @@ class VoiceAssistantHome extends StatefulWidget {
 
 class _VoiceAssistantHomeState extends State<VoiceAssistantHome> {
   late PicovoiceManager _picovoiceManager;
-  
   String _statusMessage =
-      "Say the wake word to start! wake keyword is 'Hey Qicpic'";
+      "Say the wake word to start! Wake keyword is 'Hey Qicpic'";
+  bool _showImage = false;
 
   @override
   void initState() {
@@ -45,11 +45,11 @@ class _VoiceAssistantHomeState extends State<VoiceAssistantHome> {
               ),
             ),
             const SizedBox(height: 25),
-            // const Text(
-            //   'Say "please turn on [--red/blue/green/yellow -- any one--]  light after wake keyword"',
-            //   style: TextStyle(fontSize: 18),
-            //   textAlign: TextAlign.center,
-            // ),
+            if (_showImage)
+              Image.asset(
+                'assets/QICPIC logo_Vertical-01.jpg',
+                height: 200,
+              ),
           ],
         ),
       ),
@@ -77,6 +77,7 @@ class _VoiceAssistantHomeState extends State<VoiceAssistantHome> {
   void _wakeWordCallback() {
     setState(() {
       _statusMessage = "Wake word detected!";
+      _showImage = true;
     });
     log("Wake word detected!");
   }
@@ -88,6 +89,7 @@ class _VoiceAssistantHomeState extends State<VoiceAssistantHome> {
             "Intent: ${inference.intent}\nSlots: ${inference.slots}";
       } else {
         _statusMessage = "Didn't understand the command.";
+        _showImage = false;
       }
     });
     log("Intent: ${inference.intent}");

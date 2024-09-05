@@ -236,7 +236,7 @@ packages:
     source: hosted
     version: "3.0.3"
   rhino_flutter:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: rhino_flutter
       sha256: "11f04365bcfcd2bb306d12c5df952a0193f02a070839eefbd9153c745c40e824"
